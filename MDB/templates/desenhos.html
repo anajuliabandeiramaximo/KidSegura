@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Desenhos</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- Custom CSS -->
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/darkMode.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS externo -->
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <style>
+    /* Estilos para a Navbar */
+    .navbar {
+      position: fixed;
+      /* Fixa a navbar no topo da página */
+      top: 0;
+      /* Alinha a navbar ao topo da página */
+      left: 0;
+      /* Alinha a navbar à borda esquerda da página */
+      width: 100%;
+      /* Faz a navbar ocupar toda a largura da página */
+      z-index: 1000;
+      /* Garante que a navbar fique acima de outros elementos */
+    }
+
+    /* Adiciona um espaçamento ao conteúdo para evitar sobreposição com a navbar */
+    body {
+      padding-top: 70px;
+      /* Ajuste este valor conforme a altura da sua navbar */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+      <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="img/logo1.png" height="50" alt="MDB Logo" loading="lazy" />
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Right links -->
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Para os responsáveis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Configurações</a>
+          </li>
+        </ul>
+        <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-tiktok"></i>
+        </button>
+        <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-instagram"></i>
+        </button>
+        <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-4">
+    <div class="row justify-content-center text-center p-4">
+      <h1>Desenhos</h1>
+    </div>
+
+    <!-- Calendar Section -->
+    <div id="container">
+      <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+          <button id="backButton">Voltar</button>
+          <button id="nextButton">Próximo</button>
+        </div>
+      </div>
+
+      <div id="weekdays">
+        <div>Domingo</div>
+        <div>Segunda</div>
+        <div>Terça</div>
+        <div>Quarta</div>
+        <div>Quinta</div>
+        <div>Sexta</div>
+        <div>Sábado</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+
+    <!-- Modals -->
+    <div id="newEventModal">
+      <h2>Novo Desenho</h2>
+      <input id="eventTitleInput" placeholder="Título do Desenho" />
+      <button id="saveButton">Salvar</button>
+      <button id="cancelButton">Cancelar</button>
+    </div>
+
+    <div id="deleteEventModal">
+      <h2>Evento</h2>
+      <div id="eventText"></div><br>
+      <button id="deleteButton">Deletar</button>
+      <button id="closeButton">Fechar</button>
+    </div>
+
+    <div id="modalBackDrop"></div>
+  </div>
+
+  <div class="d-grid gap-7 col-6 mx-auto mt-5">
+    <a href="home.html" class="btn btn-primary">Voltar para a Home</a>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!-- Scripts -->
+  <script src="js/darkMode.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/mdb.umd.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/navbar.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

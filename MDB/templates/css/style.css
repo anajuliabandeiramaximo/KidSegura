@@ -1,0 +1,173 @@
+/* Variáveis de Cores */
+html {
+  --body-color: #FFFCFF;
+  --header-color: #d36c6c;
+  --header-button: #92a1d1;
+  --color-weekdays: #247BA0;
+  --box-shadow: #CBD4C2;
+  --hover: #e8faed;
+  --current-day: #e8f4fa;
+  --event-color: #58bae4;
+  --modal-event: #e8f4fa;
+  --color-day: white;
+}
+
+/* Estilos Gerais */
+body {
+  display: flex;
+  flex-direction: column; /* Adiciona flex-direction para melhorar o layout */
+  margin: 0; /* Remove margem padrão */
+  background-color: var(--body-color);
+  padding-top: 70px; /* Espaçamento para a navbar fixa */
+}
+
+
+/* Botões da Navbar */
+.navbar .btn {
+  margin: 0 5px; /* Espaçamento entre os botões */
+}
+
+/* Header do Calendário */
+#header {
+  padding: 10px;
+  color: var(--header-color);
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Botões do Header */
+#header button {
+  background-color: var(--header-button);
+}
+
+/* Container do Calendário */
+#container {
+  width: 770px;
+  padding: 0 15px;
+  margin: auto; /* Centraliza o container */
+}
+
+/* Seletor de Dias da Semana */
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: var(--color-weekdays);
+}
+
+/* Estilo dos Dias */
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+}
+
+/* Estilo do Calendário */
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilo dos Dias do Calendário */
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--color-day);
+  margin: 5px;
+  box-shadow: 0px 0px 3px var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15%;
+}
+
+/* Hover nos Dias */
+.day:hover {
+  background-color: var(--hover);
+}
+
+/* Dia Atual */
+.day#currentDay {
+  background-color: var(--current-day);
+}
+
+/* Eventos */
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: var(--event-color);
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+/* Padding */
+.padding {
+  cursor: default !important;
+  background-color: var(--body-color) !important;
+  box-shadow: none !important;
+}
+
+/* Modais */
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: var(--modal-event);
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  position: fixed; /* Alterado para fixed */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta a posição para centralizar */
+  font-family: sans-serif;
+}
+
+/* Input de Título do Evento */
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+/* Input com Erro */
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+/* Botões dos Modais */
+#cancelButton, #deleteButton {
+  background-color: var(--header-color);
+}
+#saveButton, #closeButton {
+  background-color: var(--header-button);
+}
+
+/* Texto do Evento */
+#eventText {
+  font-size: 14px;
+}
+
+/* Backdrop dos Modais */
+#modalBackDrop {
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* Alterado para fixed */
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo do Semáforo</title>
+  <link rel="stylesheet" href="jogo_do_semaforo/css/semaforo.css">
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center w-100">
+            <a class="navbar-brand me-3" href="#">
+                <img src="img/logo1.png" height="50" alt="MDB Logo" loading="lazy" />
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Para os responsáveis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configurações</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                    <i class="fab fa-tiktok"></i>
+                </button>
+                <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                    <i class="fab fa-instagram"></i>
+                </button>
+                <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+  <div class="container-fluid py-4"> <!-- Adicionado py-4 para padding vertical -->
+    <!-- Título no topo da página -->
+    <div class="row justify-content-center text-center mb-4">
+      <div class="col">
+        <h1>Jogo do Semáforo</h1>
+      </div>
+    </div>
+
+    <!-- Jogo -->
+    <div class="row justify-content-center flex-grow-1">
+      <div class="col-md-10">
+        <div class="game-container">
+          <div class="traffic-lights">
+            <img src="jogo_do_semaforo/img/semaforo_vermelho.png" alt="Semáforo Vermelho" id="red" class="draggable"
+              draggable="true" style="position: relative; top: 25px; width: 180px;">
+            <img src="jogo_do_semaforo/img/semaforo_amarelo.png" alt="Semáforo Amarelo" id="yellow" class="draggable"
+              draggable="true" style="position: relative; top: -5px; width: 180px;">
+            <img src="jogo_do_semaforo/img/semaforo_verde.png" alt="Semáforo Verde" id="green" class="draggable"
+              draggable="true" style="position: relative; top: -35px; width: 180px;">
+
+          </div>
+          <div class="drop-zones">
+            <div class="drop-zone" id="head-zone"></div>
+            <div class="drop-zone" id="left-shoulder-zone"></div>
+            <div class="drop-zone" id="right-shoulder-zone"></div>
+            <div class="drop-zone" id="left-arm-zone"></div>
+            <div class="drop-zone" id="right-arm-zone"></div>
+            <div class="drop-zone" id="left-breast-zone"></div>
+            <div class="drop-zone" id="right-breast-zone"></div>
+            <div class="drop-zone" id="torso-zone"></div>
+            <div class="drop-zone" id="private-zone"></div>
+            <div class="drop-zone" id="left-thigh-zone"></div>
+            <div class="drop-zone" id="right-thigh-zone"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-6">
+        <div class="d-grid gap-4">
+          <button class="btn btn-lg" style="background-color: #7B68EE; color: white;" id="reset-button">Reiniciar Jogo</button>
+          <a href="home.html" class="btn btn-primary btn-lg">Voltar para a Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="jogo_do_semaforo/js/script.js"></script>
+</body>
+
+</html>

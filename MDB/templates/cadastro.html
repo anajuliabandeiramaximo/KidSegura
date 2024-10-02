@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--data-mdb-theme="dark"-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Cadastro</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body>
+  <!-- Navbar ------------------------------------------------------------------------------------------------->
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="img/logo1.png" height="50" alt="Logo" loading="lazy" />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="importancia.html">Importância do Projeto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html">Sobre o projeto e criadores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar ------------------------------------------------------------------------------------------------>
+
+  <div class="container my-5">
+    <form>
+      <div class="row justify-content-center text-center mb-4">
+        <h1>Cadastro</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <!-- Name input -->
+          <div data-mdb-input-init class="form-outline">
+            <input type="text" id="registerName" class="form-control" />
+            <label class="form-label" for="registerName">Nome</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <!-- Username input -->
+          <div data-mdb-input-init class="form-outline">
+            <input type="text" id="registerUsername" class="form-control" />
+            <label class="form-label" for="registerUsername">Nome de usuário</label>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline">
+            <input type="email" id="registerEmail" class="form-control" />
+            <label class="form-label" for="registerEmail">Email</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <!-- Password input -->
+          <div data-mdb-input-init class="form-outline">
+            <input type="password" id="registerPassword" class="form-control" />
+            <label class="form-label" for="registerPassword">Senha</label>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <!-- Repeat Password input -->
+          <div data-mdb-input-init class="form-outline">
+            <input type="password" id="registerRepeatPassword" class="form-control" />
+            <label class="form-label" for="registerRepeatPassword">Repetir Senha</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+          aria-describedby="registerCheckHelpText" />
+        <label class="form-check-label" for="registerCheck">
+          Li e concordo com os <a href="termos.html">termos</a>.
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <div class="d-flex justify-content-center">
+        <a href="index.html" class="btn btn-primary btn-block mb-3" data-mdb-ripple-init>Finalizar Cadastro</a>
+      </div>
+    </form>
+  </div>
+
+  <div class="row justify-content-center mb-5">
+    <div class="col-auto">
+      <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-tiktok"></i>
+      </button>
+    </div>
+    <div class="col-auto">
+      <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-instagram"></i>
+      </button>
+    </div>
+    <div class="col-auto">
+      <button data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-github"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- MDB EXTENSOES ------------------------------------------------------------>
+  <script type="text/javascript" src="js/mdb.umd.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/navbar.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>

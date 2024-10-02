@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Idade</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2 class="my-4">Verificação de Idade</h2>
+            <br>
+            <form id="ageForm">
+                <div class="form-outline mb-4">
+                  <div class="col-md-5 text-left">
+                    <label class="form-label" for="dob">Digite sua data de nascimento:</label>
+                  </div>
+                    <input type="date" id="dob" name="dob" class="form-control" required />
+                </div>
+                <button type="button" class="btn btn-primary btn-block" onclick="validateAge()">Entrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    let attempts = 0; // Contador para tentativas consecutivas
+
+    function validateAge() {
+      const dobValue = document.getElementById('dob').value;
+      
+      if (!dobValue) {
+        alert("Por favor, insira sua data de nascimento.");
+        return;
+      }
+
+      const dob = new Date(dobValue);
+      const today = new Date();
+
+      let age = today.getFullYear() - dob.getFullYear();
+      const monthDiff = today.getMonth() - dob.getMonth();
+
+      // Verifica o mês e o dia para calcular corretamente a idade
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+
+      // Verifica se a idade é maior ou igual a 18 anos
+      if (age >= 18 || (age >= 14 && age < 18)) {
+        window.location.href = "importancia.html";
+      } 
+      else if (age < 14) {
+        attempts++; // Incrementa o contador de tentativas
+        if (attempts >= 3) {
+          alert("Essa página só pode ser aberta pelo seu responsável. Fazemos isso para proteger você, por favor não tente abri-la novamente e peça ao responsável que faça o Login!!");
+          window.history.back(); // Volta à página anterior após a mensagem
+        } else {
+          alert("Você deve ter pelo menos 14 anos para tentar acessar esta página.");
+        }
+      } 
+    }
+</script>
+
+</body>
+</html>
